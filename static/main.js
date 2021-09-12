@@ -1,59 +1,75 @@
-var graphs = [];
-var graphnum = 0;
-var get = 0;
-var tot = 0;
-var need = 0;
+var graphs;
+var graphnum;
+var get;
+var tot;
+var need;
+var resultdata;
+var entiredata;
 
-var resultdata = {};
-var entiredata = [
-  {
-    name: "이재명",
-    member: 0,
-    delegate: 0,
-    citizen: 0,
-    entire: 0,
-  },
-  {
-    name: "김두관",
-    member: 0,
-    delegate: 0,
-    citizen: 0,
-    entire: 0,
-  },
-  {
-    name: "정세균",
-    member: 0,
-    delegate: 0,
-    citizen: 0,
-    entire: 0,
-  },
-  {
-    name: "이낙연",
-    member: 0,
-    delegate: 0,
-    citizen: 0,
-    entire: 0,
-  },
-  {
-    name: "박용진",
-    member: 0,
-    delegate: 0,
-    citizen: 0,
-    entire: 0,
-  },
-  {
-    name: "추미애",
-    member: 0,
-    delegate: 0,
-    citizen: 0,
-    entire: 0,
-  },
-];
+function init() {
+  graphs = [];
+  graphnum = 0;
+  get = 0;
+  tot = 0;
+  need = 0;
+  var par1 = document.getElementById("onlineresult");
+  var par2 = document.getElementById("localresult");
+
+  par1.innerHTML = "";
+  par2.innerHTML = "";
+
+  resultdata = {};
+  entiredata = [
+    {
+      name: "이재명",
+      member: 0,
+      delegate: 0,
+      citizen: 0,
+      entire: 0,
+    },
+    {
+      name: "김두관",
+      member: 0,
+      delegate: 0,
+      citizen: 0,
+      entire: 0,
+    },
+    {
+      name: "정세균",
+      member: 0,
+      delegate: 0,
+      citizen: 0,
+      entire: 0,
+    },
+    {
+      name: "이낙연",
+      member: 0,
+      delegate: 0,
+      citizen: 0,
+      entire: 0,
+    },
+    {
+      name: "박용진",
+      member: 0,
+      delegate: 0,
+      citizen: 0,
+      entire: 0,
+    },
+    {
+      name: "추미애",
+      member: 0,
+      delegate: 0,
+      citizen: 0,
+      entire: 0,
+    },
+  ];
+}
 
 function getdata() {
   fetch("./data.json")
     .then((response) => response.text())
     .then(function (data) {
+      init();
       var jsondat = JSON.parse(data);
       var localdata = jsondat.local;
       var onlinedata = jsondat.online;
@@ -72,6 +88,7 @@ function getdata() {
       graphs.forEach(function (element) {
         element.flush();
       });
+      console.log("데이터 업데이트됨.");
       window.setTimeout(getdata, 60000);
     });
 }
