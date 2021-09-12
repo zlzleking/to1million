@@ -1,7 +1,7 @@
 var graphs = [];
 var graphnum = 0;
 var get = 0;
-var tot = 2062103;
+var tot = 0;
 var need = tot / 2;
 
 var resultdata = {};
@@ -57,6 +57,10 @@ function getdata() {
       var jsondat = JSON.parse(data);
       var localdata = jsondat.local;
       var onlinedata = jsondat.online;
+      var meta = jsondat.meta;
+      tot = meta.total;
+      var lastmod = docyment.getElementById("updatedate");
+      lastmod.textContent = meta.lastmodified;
       localdata.forEach(function (element) {
         makelocalgraph(element);
       });
@@ -231,13 +235,9 @@ function makelocalgraph(data) {
   resultarea.className = "graphArea";
 
   var entirearea = makeGraphArea("전체 결과", graphnum);
-  graphnum++;
   var delegatearea = makeGraphArea("대의원", graphnum);
-  graphnum++;
   var memberarea = makeGraphArea("권리당원", graphnum);
-  graphnum++;
   var citizenarea = makeGraphArea("일반당원, 시민선거인단", graphnum);
-  graphnum++;
 
   resultarea.appendChild(entirearea);
   resultarea.appendChild(delegatearea);
@@ -267,6 +267,7 @@ function makeGraphArea(title, graphnum) {
   graph.id = "graph" + graphnum;
   graphArea.appendChild(areaHeader);
   graphArea.appendChild(graph);
+  graphnum++;
   return graphArea;
 }
 
