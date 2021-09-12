@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>To 1 Million</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="static/main.css" />
+    <link rel="stylesheet" href="static/billboard.min.css" />
+
+    <script src="static/billboard.pkgd.min.js"></script>
+    <script src="static/main.js"></script>
+  </head>
+
+  <body>
+    <div id="main-wrapper">
+      <h1>더불어민주당 제 20대 대통령 선거 경선 - To 1 Million</h1>
+      <div id="updatedate">최근 업데이트 - 2021년 9월 12일 2시 5분</div>
+      <br />
+      <section id="result">
+        <article>
+          제 20대 대통령 선거의 더불어민주당 후보자 경선 결과를 정리한
+          페이지입니다. 누가 선거인단의 절반을 먼저 획득해 후보가 될 수
+          있을까요?
+        </article>
+        <div class="resultArea">
+          <h2>종합 결과</h2>
+          <div class="graphArea">
+            <div class="graphSection">
+              <h2>전체 결과</h2>
+              <div id="graph_entire"></div>
+            </div>
+            <div class="graphSection">
+              <h2>대의원</h2>
+              <div id="graph_delegate"></div>
+            </div>
+            <div class="graphSection">
+              <h2>권리당원</h2>
+              <div id="graph_member"></div>
+            </div>
+            <div class="graphSection">
+              <h2>일반당원, 시민선거인단</h2>
+              <div id="graph_citizen"></div>
+            </div>
+          </div>
+        </div>
+
+        <h2 style="text-align: center">일반당원, 시민선거인단 온라인 투표 결과</h2>
+        <div id="onlineresult" style="text-align: center"></div>
+
+        <h2 style="text-align: center">지역별 결과</h2>
+        <div id="localresult" style="text-align: center"></div>
+        <div class="remaingraph resultArea">
+          <h2>이재명이 당선되기까지 남은 표</h2>
+          <div class="graphArea">
+            <div id="remain" class="graphSection"></div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div id="footerArea">
+          지역별 결과의 일반당원, 시민선거인단 투표 결과는 현장투표만 해당됩니다.
+          <br>
+          By <a href="https://twitter.com/zlzleking">Zlzleking.</a> With
+          <a href="https://github.com/naver/billboard.js">Billboard.js</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

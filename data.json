@@ -1,0 +1,162 @@
+{
+  "online": [
+    {
+      "name": "1차 선거인단",
+      "result": [
+        {
+          "name": "이재명",
+          "member": 0
+        },
+        {
+          "name": "김두관",
+          "member": 0
+        },
+        {
+          "name": "정세균",
+          "member": 0
+        },
+        {
+          "name": "이낙연",
+          "member": 0
+        },
+        {
+          "name": "박용진",
+          "member": 0
+        },
+        {
+          "name": "추미애",
+          "member": 0
+        },
+        {
+          "name": "미발표",
+          "member": 100
+        }
+      ]
+    }
+  ],
+  "local": [
+    {
+      "name": "대전, 충남",
+      "result": [
+        {
+          "name": "이재명",
+          "member": 13685,
+          "delegate": 324,
+          "citizen": 3
+        },
+        {
+          "name": "김두관",
+          "member": 213,
+          "delegate": 1,
+          "citizen": 0
+        },
+        {
+          "name": "정세균",
+          "member": 1827,
+          "delegate": 175,
+          "citizen": 1
+        },
+        {
+          "name": "이낙연",
+          "member": 6748,
+          "delegate": 255,
+          "citizen": 4
+        },
+        {
+          "name": "박용진",
+          "member": 621,
+          "delegate": 3,
+          "citizen": 0
+        },
+        {
+          "name": "추미애",
+          "member": 1691,
+          "delegate": 13,
+          "citizen": 0
+        }
+      ]
+    },
+    {
+      "name": "세종, 충북",
+      "result": [
+        {
+          "name": "이재명",
+          "member": 6828,
+          "delegate": 204,
+          "citizen": 3
+        },
+        {
+          "name": "김두관",
+          "member": 108,
+          "delegate": 12,
+          "citizen": 0
+        },
+        {
+          "name": "정세균",
+          "member": 667,
+          "delegate": 41,
+          "citizen": 0
+        },
+        {
+          "name": "이낙연",
+          "member": 3636,
+          "delegate": 195,
+          "citizen": 3
+        },
+        {
+          "name": "박용진",
+          "member": 286,
+          "delegate": 1,
+          "citizen": 0
+        },
+        {
+          "name": "추미애",
+          "member": 903,
+          "delegate": 12,
+          "citizen": 0
+        }
+      ]
+    },
+    {
+      "name": "대구, 경북",
+      "result": [
+        {
+          "name": "이재명",
+          "member": 5489,
+          "delegate": 505,
+          "citizen": 5
+        },
+        {
+          "name": "김두관",
+          "member": 104,
+          "delegate": 46,
+          "citizen": 1
+        },
+        {
+          "name": "정세균",
+          "member": 338,
+          "delegate": 85,
+          "citizen": 0
+        },
+        {
+          "name": "이낙연",
+          "member": 3063,
+          "delegate": 218,
+          "citizen": 3
+        },
+        {
+          "name": "박용진",
+          "member": 128,
+          "delegate": 9,
+          "citizen": 0
+        },
+        {
+          "name": "추미애",
+          "member": 1671,
+          "delegate": 70,
+          "citizen": 0
+        }
+      ]
+    }
+  ]
+}

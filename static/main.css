@@ -1,0 +1,99 @@
+.graphArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.graphSection {
+  text-align: center;
+  flex-basis: 300px;
+  flex-grow: 1;
+  margin-bottom: 2rem;
+}
+.graphSection div svg {
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  word-break: keep-all;
+  color: #fefefe;
+}
+* {
+  font-family: "Apple SD Gothic Neo", "Spoqa Han Sans", "SpoqaHanSans",
+    "Noto Sans KR", "Noto Sans", "Noto Sans CJK KR", "NanumBarunGothic",
+    "Nanum Gothic", "KoPub Dotum", "Malgun Gothic", "맑은 고딕", sans-serif;
+}
+
+#main-wrapper {
+  padding: 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #004ea2;
+}
+
+#updatedate {
+  text-align: right;
+  float: right;
+  color: #fefefe;
+}
+
+.graphSection {
+  clear: both;
+}
+#result {
+  clear: both;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0 2rem 0 2rem;
+}
+#result > h2 {
+  color: #fefefe;
+}
+
+#result article {
+  text-align: center;
+  font-size: 1.3rem;
+  word-break: keep-all;
+  margin-bottom: 2rem;
+  color: #fefefe;
+}
+
+.remaingraph {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.remaingraph .graphArea > div {
+  margin: 0 auto;
+  min-height: 300px;
+}
+.resultArea {
+  background-color: #fefefe;
+  border-radius: 2rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.resultArea h2 {
+  text-align: center;
+}
+
+#localresult {
+  margin: 3rem 0 3rem 0;
+}
+footer {
+  padding: 2rem;
+}
+
+#footerArea {
+  background-color: #fefefe;
+  border-radius: 2rem;
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
