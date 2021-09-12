@@ -2,7 +2,7 @@ var graphs = [];
 var graphnum = 0;
 var get = 0;
 var tot = 0;
-var need = tot / 2;
+var need = 0;
 
 var resultdata = {};
 var entiredata = [
@@ -58,8 +58,9 @@ function getdata() {
       var localdata = jsondat.local;
       var onlinedata = jsondat.online;
       var meta = jsondat.meta;
-      tot = meta.total;
-      var lastmod = docyment.getElementById("updatedate");
+      tot = parseInt(meta.total);
+      need = tot / 2;
+      var lastmod = document.getElementById("updatedate");
       lastmod.textContent = meta.lastmodified;
       localdata.forEach(function (element) {
         makelocalgraph(element);
@@ -71,6 +72,7 @@ function getdata() {
       graphs.forEach(function (element) {
         element.flush();
       });
+      window.setTimeout(getdata, 60000);
     });
 }
 
@@ -130,6 +132,9 @@ function makeentiregraph() {
           },
         },
       },
+      legend: {
+        show: false,
+      },
       color: {},
       bindto: "#" + "remain",
     })
@@ -167,8 +172,7 @@ function makeOnlineGraph(data) {
   var resultarea = document.createElement("DIV");
   resultarea.className = "graphArea";
 
-  var entirearea = makeGraphArea(data.name, graphnum);
-  graphnum++;
+  var entirearea = makeGraphArea(data.name);
 
   resultarea.appendChild(entirearea);
 
@@ -234,10 +238,10 @@ function makelocalgraph(data) {
   var resultarea = document.createElement("DIV");
   resultarea.className = "graphArea";
 
-  var entirearea = makeGraphArea("전체 결과", graphnum);
-  var delegatearea = makeGraphArea("대의원", graphnum);
-  var memberarea = makeGraphArea("권리당원", graphnum);
-  var citizenarea = makeGraphArea("일반당원, 시민선거인단", graphnum);
+  var entirearea = makeGraphArea("전체 결과");
+  var delegatearea = makeGraphArea("대의원");
+  var memberarea = makeGraphArea("권리당원");
+  var citizenarea = makeGraphArea("일반당원, 시민선거인단");
 
   resultarea.appendChild(entirearea);
   resultarea.appendChild(delegatearea);
@@ -257,7 +261,7 @@ function makelocalgraph(data) {
   drawDounutGraph(graphs, citizencol, citizenarea.getAttribute("gnum"));
 }
 
-function makeGraphArea(title, graphnum) {
+function makeGraphArea(title) {
   var graphArea = document.createElement("DIV");
   graphArea.className = "graphSection";
   var areaHeader = document.createElement("H3");
