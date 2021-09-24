@@ -1,19 +1,18 @@
 {
   "meta": {
-    "total": "2071582",
-    "lastmodified": "마지막 업데이트 - 2021년 9월 12일 17시 50분"
+    "total": "0",
+    "lastmodified": "마지막 업데이트 - 2021년 9월 24일 18시 32분"
   },
   "online": [
     {
       "name": "1차 선거인단",
       "result": [
-        { "name": "이재명", "member": 0 },
-        { "name": "김두관", "member": 0 },
-        { "name": "정세균", "member": 0 },
-        { "name": "이낙연", "member": 0 },
-        { "name": "박용진", "member": 0 },
-        { "name": "추미애", "member": 0 },
-        { "name": "미발표", "member": 100 }
+        { "name": "이재명", "member": 253762 },
+        { "name": "김두관", "member": 2974 },
+        { "name": "정세균", "member": 20014 },
+        { "name": "이낙연", "member": 156203 },
+        { "name": "박용진", "member": 5741 },
+        { "name": "추미애", "member": 57977 }
       ]
     }
   ],
@@ -49,6 +48,17 @@
         { "name": "이낙연", "member": 3063, "delegate": 218, "citizen": 3 },
         { "name": "박용진", "member": 128, "delegate": 9, "citizen": 0 },
         { "name": "추미애", "member": 1671, "delegate": 70, "citizen": 0 }
+      ]
+    },
+    {
+      "name": "강원",
+      "result": [
+        { "name": "이재명", "member": 4842, "delegate": 203, "citizen": 3 },
+        { "name": "김두관", "member": 62, "delegate": 5, "citizen": 0 },
+        { "name": "정세균", "member": 499, "delegate": 84, "citizen": 0 },
+        { "name": "이낙연", "member": 2320, "delegate": 141, "citizen": 1 },
+        { "name": "박용진", "member": 168, "delegate": 5, "citizen": 0 },
+        { "name": "추미애", "member": 771, "delegate": 14, "citizen": 0 }
       ]
     }
   ]
