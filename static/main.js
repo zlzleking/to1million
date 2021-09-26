@@ -75,7 +75,6 @@ function getdata() {
       var onlinedata = jsondat.online;
       var meta = jsondat.meta;
       tot = parseInt(meta.total);
-      need = tot / 2;
       var lastmod = document.getElementById("updatedate");
       lastmod.textContent = meta.lastmodified;
       localdata.forEach(function (element) {
@@ -84,6 +83,7 @@ function getdata() {
       onlinedata.forEach(function (element) {
         makeOnlineGraph(element);
       });
+      need = tot / 2;
       makeentiregraph();
       graphs.forEach(function (element) {
         element.flush();
@@ -164,6 +164,7 @@ function makeentiregraph() {
 function makeOnlineGraph(data) {
   var entirecol = [];
   var membersum = 0;
+  tot = tot - data.notelec;
 
   data.result.forEach(function (element) {
     membersum += element.member;
@@ -213,6 +214,7 @@ function makelocalgraph(data) {
   var membersum = 0;
   var delegatesum = 0;
   var citizensum = 0;
+  tot = tot - data.notelec;
 
   data.result.forEach(function (element) {
     membersum += element.member;

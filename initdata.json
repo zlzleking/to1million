@@ -13,7 +13,8 @@
         { "name": "이낙연", "member": 156203 },
         { "name": "박용진", "member": 5741 },
         { "name": "추미애", "member": 57977 }
-      ]
+      ],
+      "notelec": 190292
     }
   ],
   "local": [
@@ -26,7 +27,8 @@
         { "name": "이낙연", "member": 6748, "delegate": 255, "citizen": 4 },
         { "name": "박용진", "member": 621, "delegate": 3, "citizen": 0 },
         { "name": "추미애", "member": 1691, "delegate": 13, "citizen": 0 }
-      ]
+      ],
+      "notelec": 32488
     },
     {
       "name": "세종, 충북",
@@ -37,7 +39,8 @@
         { "name": "이낙연", "member": 3636, "delegate": 195, "citizen": 3 },
         { "name": "박용진", "member": 286, "delegate": 1, "citizen": 0 },
         { "name": "추미애", "member": 903, "delegate": 12, "citizen": 0 }
-      ]
+      ],
+      "notelec": 13470
     },
     {
       "name": "대구, 경북",
@@ -48,7 +51,8 @@
         { "name": "이낙연", "member": 3063, "delegate": 218, "citizen": 3 },
         { "name": "박용진", "member": 128, "delegate": 9, "citizen": 0 },
         { "name": "추미애", "member": 1671, "delegate": 70, "citizen": 0 }
-      ]
+      ],
+      "notelec": 5761
     },
     {
       "name": "강원",
@@ -59,7 +63,8 @@
         { "name": "이낙연", "member": 2320, "delegate": 141, "citizen": 1 },
         { "name": "박용진", "member": 168, "delegate": 5, "citizen": 0 },
         { "name": "추미애", "member": 771, "delegate": 14, "citizen": 0 }
-      ]
+      ],
+      "notelec": 8895
     },
     {
       "name": "광주, 전남",
@@ -69,7 +74,8 @@
         { "name": "이낙연", "member": 33211, "delegate": 600, "citizen": 37 },
         { "name": "박용진", "member": 461, "delegate": 10, "citizen": 0 },
         { "name": "추미애", "member": 3086, "delegate": 25, "citizen": 2 }
-      ]
+      ],
+      "notelec": 75546
     },
     {
       "name": "전북",
@@ -79,7 +85,8 @@
         { "name": "이낙연", "member": 15454, "delegate": 255, "citizen": 6 },
         { "name": "박용진", "member": 506, "delegate": 6, "citizen": 0 },
         { "name": "추미애", "member": 2103, "delegate": 23, "citizen": 1 }
-      ]
+      ],
+      "notelec": 48595
     }
   ]
 }
