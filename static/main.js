@@ -102,6 +102,9 @@ function makeentiregraph() {
   var delegatesum = 0;
   var citizensum = 0;
 
+  // 김두관, 정세균 사퇴로 인한 결과 반영
+  entiredata.splice(1, 2);
+
   entiredata.forEach(function (element) {
     membersum += element.member;
     delegatesum += element.delegate;

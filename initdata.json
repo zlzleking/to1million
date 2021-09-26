@@ -1,7 +1,7 @@
 {
   "meta": {
     "total": "0",
-    "lastmodified": "마지막 업데이트 - 2021년 9월 24일 18시 32분"
+    "lastmodified": "업데이트 중..."
   },
   "online": [
     {
@@ -59,6 +59,26 @@
         { "name": "이낙연", "member": 2320, "delegate": 141, "citizen": 1 },
         { "name": "박용진", "member": 168, "delegate": 5, "citizen": 0 },
         { "name": "추미애", "member": 771, "delegate": 14, "citizen": 0 }
+      ]
+    },
+    {
+      "name": "광주, 전남",
+      "result": [
+        { "name": "이재명", "member": 33118, "delegate": 588, "citizen": 20 },
+        { "name": "김두관", "member": 620, "delegate": 56, "citizen": 1 },
+        { "name": "이낙연", "member": 33211, "delegate": 600, "citizen": 37 },
+        { "name": "박용진", "member": 461, "delegate": 10, "citizen": 0 },
+        { "name": "추미애", "member": 3086, "delegate": 25, "citizen": 2 }
+      ]
+    },
+    {
+      "name": "전북",
+      "result": [
+        { "name": "이재명", "member": 21885, "delegate": 383, "citizen": 8 },
+        { "name": "김두관", "member": 199, "delegate": 8, "citizen": 1 },
+        { "name": "이낙연", "member": 15454, "delegate": 255, "citizen": 6 },
+        { "name": "박용진", "member": 506, "delegate": 6, "citizen": 0 },
+        { "name": "추미애", "member": 2103, "delegate": 23, "citizen": 1 }
       ]
     }
   ]
