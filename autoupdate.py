@@ -1,20 +1,25 @@
 import json
+import os
 import requests as rqs
 import datetime as dt
 from flask import Flask, request
+globalLastMod = 0
 
 
 def init():
-    d = dt.datetime.now()
-    dtNow = "{0}년 {1}월 {2}일 {3}시 {4}분".format(
-        d.year, d.month, d.day, d.hour, d.minute)
+    global globalLastMod
 
     #data = rqs.get(url).text
     #datajson = json.loads(data[9:-2])
-    #print(datajson)
+    # print(datajson)
 
     file = open("initdata.json", 'r', encoding='UTF8')
     fileJson = json.loads(file.read())
+    globalLastMod = os.path.getmtime(file)
+
+    d = globalLastMod
+    dtNow = "{0}년 {1}월 {2}일 {3}시 {4}분".format(
+        d.year, d.month, d.day, d.hour, d.minute)
     file.close()
     #fileJson['meta']['total'] = datajson['count']
     fileJson['meta']['lastmodified'] = "마지막 업데이트 - " + dtNow
@@ -24,17 +29,29 @@ def init():
 
 
 def update(dat):
-    d = dt.datetime.now()
-    dtNow = "{0}년 {1}월 {2}일 {3}시 {4}분".format(
-        d.year, d.month, d.day, d.hour, d.minute)
+    global globalLastMod
 
+    file = open("initdata.json", 'r', encoding='UTF8')
+    modTime = os.path.getmtime(file)
+    if modTime != globalLastMod:
+        fileJson = json.loads(file.read())
+        d = modTime
+        globalLastMod = d
+        dtNow = "{0}년 {1}월 {2}일 {3}시 {4}분".format(
+            d.year, d.month, d.day, d.hour, d.minute)
+        dat = fileJson
+        dat['meta']['lastmodified'] = "마지막 업데이트 - " + dtNow
+        print("데이터 업데이트 완료 - " + dtNow)
+        print(d)
+    else: 
+        d = globalLastMod
+        dtNow = "{0}년 {1}월 {2}일 {3}시 {4}분".format(
+            d.year, d.month, d.day, d.hour, d.minute)
+    file.close()
     #data = rqs.get(url).text
     #datajson = json.loads(data[9:-2])
-    #print(datajson)
+    # print(datajson)
     #dat['meta']['total'] = datajson['count']
-    dat['meta']['lastmodified'] = "마지막 업데이트 - " + dtNow
-    print("데이터 업데이트 완료 - " + dtNow)
-    print(d)
     return dat, d
 
 
@@ -42,6 +59,7 @@ url = "https://win.theminjoo.kr/apis/stats/counts/total"
 dat, lastmod = init()
 
 app = Flask(__name__)
+
 
 @app.route('/')
 @app.route('/data.json')
