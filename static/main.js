@@ -120,8 +120,8 @@ function drawEntireGraph(data, includeRetire) {
 
   drawDounutGraph(graphs.entire, graphElement.entire, entirearea.id);
   drawDounutGraph(graphs.entire, graphElement.delegate, delegatearea.id);
-  drawDounutGraph(graphs.entire, graphElement.citizen, memberarea.id);
-  drawDounutGraph(graphs.entire, graphElement.member, citizenarea.id);
+  drawDounutGraph(graphs.entire, graphElement.member, memberarea.id);
+  drawDounutGraph(graphs.entire, graphElement.citizen, citizenarea.id);
 }
 
 // 온라인 투표 결과 생성
@@ -245,6 +245,7 @@ function getDoom(element) {
 function makeDoomCounter(data) {
   var needs = (data.total - data.notElec) / 2;
   var doomArea = document.getElementById("remain");
+  doomArea.innerHTML = "";
   var doomPerson = getDoom(data.persnonEntire);
   var graphElement = [
     ["달성률", Math.round((doomPerson.entire / needs) * 100000) / 1000],
