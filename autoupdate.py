@@ -9,14 +9,14 @@ def init():
     dtNow = "{0}년 {1}월 {2}일 {3}시 {4}분".format(
         d.year, d.month, d.day, d.hour, d.minute)
 
-    data = rqs.get(url).text
-    datajson = json.loads(data[9:-2])
-    print(datajson)
+    #data = rqs.get(url).text
+    #datajson = json.loads(data[9:-2])
+    #print(datajson)
 
     file = open("initdata.json", 'r', encoding='UTF8')
     fileJson = json.loads(file.read())
     file.close()
-    fileJson['meta']['total'] = datajson['count']
+    #fileJson['meta']['total'] = datajson['count']
     fileJson['meta']['lastmodified'] = "마지막 업데이트 - " + dtNow
     print("초기화 완료 - " + dtNow)
     print(d)
@@ -28,10 +28,10 @@ def update(dat):
     dtNow = "{0}년 {1}월 {2}일 {3}시 {4}분".format(
         d.year, d.month, d.day, d.hour, d.minute)
 
-    data = rqs.get(url).text
-    datajson = json.loads(data[9:-2])
-    print(datajson)
-    dat['meta']['total'] = datajson['count']
+    #data = rqs.get(url).text
+    #datajson = json.loads(data[9:-2])
+    #print(datajson)
+    #dat['meta']['total'] = datajson['count']
     dat['meta']['lastmodified'] = "마지막 업데이트 - " + dtNow
     print("데이터 업데이트 완료 - " + dtNow)
     print(d)
