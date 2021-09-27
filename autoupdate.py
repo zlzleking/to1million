@@ -15,7 +15,8 @@ def init():
 
     file = open("initdata.json", 'r', encoding='UTF8')
     fileJson = json.loads(file.read())
-    globalLastMod = os.path.getmtime(file)
+    globalLastMod = dt.datetime.fromtimestamp(
+        os.path.getmtime("initdata.json"))
 
     d = globalLastMod
     dtNow = "{0}년 {1}월 {2}일 {3}시 {4}분".format(
@@ -32,7 +33,8 @@ def update(dat):
     global globalLastMod
 
     file = open("initdata.json", 'r', encoding='UTF8')
-    modTime = os.path.getmtime(file)
+    modTime = dt.datetime.fromtimestamp(os.path.getmtime("initdata.json"))
+
     if modTime != globalLastMod:
         fileJson = json.loads(file.read())
         d = modTime
@@ -43,7 +45,7 @@ def update(dat):
         dat['meta']['lastmodified'] = "마지막 업데이트 - " + dtNow
         print("데이터 업데이트 완료 - " + dtNow)
         print(d)
-    else: 
+    else:
         d = globalLastMod
         dtNow = "{0}년 {1}월 {2}일 {3}시 {4}분".format(
             d.year, d.month, d.day, d.hour, d.minute)
