@@ -10,8 +10,10 @@
   text-align: center;
   flex-basis: 300px;
   flex-grow: 1;
+  flex-shrink: 1;
   margin-bottom: 2rem;
 }
+
 .graphSection div svg {
   margin: 0 auto;
 }
@@ -41,10 +43,6 @@ body {
   float: right;
   color: #fefefe;
 }
-
-.graphSection {
-  clear: both;
-}
 #result {
   clear: both;
   margin-top: 2rem;
@@ -69,7 +67,7 @@ body {
   flex-direction: column;
 }
 
-.remaingraph .graphArea > div {
+.remaingraph .graphSection > div {
   margin: 0 auto;
   min-height: 300px;
 }

@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="static/billboard.min.css" />
 
     <script src="static/billboard.pkgd.min.js"></script>
+    <script src="static/josa.js" type="text/javascript"></script>
     <script src="static/main.js"></script>
+    
   </head>
 
   <body>
@@ -22,48 +24,25 @@
           페이지입니다. 누가 선거인단의 절반을 먼저 획득해 후보가 될 수
           있을까요?
         </article>
-        <div class="resultArea">
-          <h2>종합 결과</h2>
-          <div class="graphArea">
-            <div class="graphSection">
-              <h2>전체 결과</h2>
-              <div id="graph_entire"></div>
-            </div>
-            <div class="graphSection">
-              <h2>대의원</h2>
-              <div id="graph_delegate"></div>
-            </div>
-            <div class="graphSection">
-              <h2>권리당원</h2>
-              <div id="graph_member"></div>
-            </div>
-            <div class="graphSection">
-              <h2>일반당원, 시민선거인단</h2>
-              <div id="graph_citizen"></div>
-            </div>
-          </div>
-        </div>
-
-        <h2 style="text-align: center">일반당원, 시민선거인단 온라인 투표 결과</h2>
-        <div id="onlineresult" style="text-align: center"></div>
-
+        <div id="entireResult" class="resultArea"></div>
+        <h2 style="text-align: center">
+          일반당원, 시민선거인단 온라인 투표 결과
+        </h2>
+        <div id="onlineresult" class="resultArea"></div>
         <h2 style="text-align: center">지역별 결과</h2>
-        <div id="localresult" style="text-align: center"></div>
-        <div class="remaingraph resultArea">
-          <h2>이재명이 당선되기까지 남은 표</h2>
-          <div class="graphArea">
-            <div id="remain" class="graphSection"></div>
-          </div>
-        </div>
+        <div id="localresult" class="resultArea"></div>
+        <div id="remain" class="remaingraph resultArea"></div>
       </section>
       <footer>
         <div id="footerArea">
-          지역별 결과의 일반당원, 시민선거인단 투표 결과는 현장투표만 해당됩니다.
-          <br>
-          김두관, 정세균 후보의 표는 후보 사퇴 시 무효표 처리하는 관계로 총득표수 합산에 반영되지 않습니다.
-          <br>
+          지역별 결과의 일반당원, 시민선거인단 투표 결과는 현장투표만
+          해당됩니다.
+          <br />
+          김두관, 정세균 후보의 표는 후보 사퇴 시 무효표 처리하는 관계로
+          총득표수 합산에 반영되지 않습니다.
+          <br />
           By <a href="https://twitter.com/zlzleking">Zlzleking.</a> With
-          <a href="https://github.com/naver/billboard.js">Billboard.js</a>
+          <a href="https://github.com/naver/billboard.js">Billboard.js</a> and <a href="https://github.com/e-/Josa.js/">Josa.js</a>
         </div>
       </footer>
     </div>
