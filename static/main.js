@@ -128,36 +128,36 @@ function drawEntireGraph(data, includeRetire) {
 // 각 온라인 투표 결과를 받을 것
 function makeOnlineGraph(data) {
   var graphElement = [];
+  var datalist = [];
 
   // 그래프 생성 지점 확정
   var onlineResultArea = document.getElementById("onlineresult");
   onlineResultArea.innerHTML = "";
+  var graphArea = document.createElement("DIV");
+  graphArea.className = "graphArea";
+  onlineResultArea.appendChild(graphArea);
+
   // 각 투표마다 실행
   data.forEach((element) => {
+    graphElement = [];
     // 그래프 데이터 생성, 각 후보마다 시행
     element.result.forEach((ele) => {
       graphElement.push([ele.name, ele.member]);
     });
 
-    // 헤더 생성
-    var sectionName = element.name;
-    var sectionHeader = document.createElement("H2");
-    sectionHeader.textContent = sectionName;
-    onlineResultArea.appendChild(sectionHeader);
-
-    // 그래프 표시 영역 만들기
-    var drawArea = document.createElement("DIV");
-    drawArea.className = "graphArea";
-    onlineResultArea.appendChild(drawArea);
-
-    // 그래프 영역 생성 그리고 초기 렌더링
+    // 그래프 영역 생성
     var entirearea = makeGraphArea(
-      data.name,
+      element.name,
       graphs.online,
       "online_" + graphs.online.length
     );
-    drawArea.appendChild(entirearea.data);
-    drawDounutGraph(graphs.online, graphElement, entirearea.id);
+    graphArea.appendChild(entirearea.data);
+    datalist.push([graphs.online, graphElement, entirearea.id]);
+  });
+
+  // 그래프 렌더링
+  datalist.forEach((element) => {
+    drawDounutGraph(element[0], element[1], element[2]);
   });
 }
 
@@ -247,9 +247,13 @@ function makeDoomCounter(data) {
   var doomArea = document.getElementById("remain");
   doomArea.innerHTML = "";
   var doomPerson = getDoom(data.persnonEntire);
+  if (needs < doomPerson.entire) {
+    doomPerson.entire = needs;
+  }
   var graphElement = [
     ["달성률", Math.round((doomPerson.entire / needs) * 100000) / 1000],
   ];
+
   // 헤더 이름 결정
   var sectionName = doomPerson.name;
   var sectionHeader = document.createElement("H2");
@@ -358,7 +362,6 @@ function updateData() {
       var jsondat = JSON.parse(data);
       processData(jsondat);
       updateGraphs(jsondat);
-      window.setTimeout(updateData, 60000);
     });
 }
 
